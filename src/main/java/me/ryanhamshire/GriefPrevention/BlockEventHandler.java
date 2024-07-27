@@ -145,6 +145,11 @@ public class BlockEventHandler implements Listener
 
         if (player == null || sign == null) return;
 
+        String signString = sign.getLine(0);
+        if(Objects.requireNonNull(signString).contains("[iine]")) {
+            return;
+        }
+
         Supplier<String> noBuildReason = ProtectionHelper.checkPermission(player, sign.getLocation(), ClaimPermission.Build, event);
         if (noBuildReason != null)
         {
