@@ -490,7 +490,6 @@ public class Claim
             Material material = null;
             if (event instanceof BlockBreakEvent || event instanceof BlockPlaceEvent)
                 material = ((BlockEvent) event).getBlock().getType();
-
             if (material != null && placeableForFarming(material)
                     && this.getDefaultDenial(player, uuid, ClaimPermission.Inventory, event) == null)
                 return null;

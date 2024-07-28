@@ -1487,8 +1487,8 @@ class PlayerEventHandler implements Listener
             return;
 
         // If user is not allowed to build, prevent sign UI opening and send message.
-        GriefPrevention.sendMessage(player, TextMode.Err, denial.get());
-        event.setCancelled(true);
+        //GriefPrevention.sendMessage(player, TextMode.Err, denial.get());
+        //event.setCancelled(true);
     }
 
     //when a player interacts with the world
